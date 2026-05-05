@@ -1,0 +1,23 @@
+# LangChain
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-google-genai>=2.0.0
+langgraph>=0.2.0
+
+# AutoGen 0.4+
+autogen-agentchat>=0.4.0
+autogen-ext[openai]>=0.4.0
+
+# CrewAI
+crewai>=0.80.0
+
+# SmolAgents
+smolagents>=1.0.0
+litellm>=1.40.0
+
+# Shared
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.2.0
+google-auth-oauthlib>=1.1.0
+rich>=13.0.0
+python-dotenv>=1.0.0
