@@ -43,8 +43,8 @@ def parse_args():
     p.add_argument(
         "--libs",
         nargs="+",
-        choices=["delfhos", "langchain", "autogen", "crewai", "smolagents"],
-        default=["delfhos", "langchain", "autogen", "crewai", "smolagents"],
+        choices=["delfhos", "langchain", "smolagents"],
+        default=["delfhos", "langchain", "smolagents"],
         help="Libraries to benchmark (default: all)",
     )
     p.add_argument(
@@ -63,16 +63,12 @@ def parse_args():
 RUNNER_MAP = {
     "delfhos":    "benchmark.run_delfhos",
     "langchain":  "benchmark.run_langchain",
-    "autogen":    "benchmark.run_autogen",
-    "crewai":     "benchmark.run_crewai",
     "smolagents": "benchmark.run_smolagents",
 }
 
 DISPLAY_NAMES = {
     "delfhos":    "Delfhos",
     "langchain":  "LangChain",
-    "autogen":    "AutoGen",
-    "crewai":     "CrewAI",
     "smolagents": "SmolAgents",
 }
 
@@ -87,8 +83,6 @@ def _check_imports(libs: list[str]) -> list[str]:
     missing = []
     checks = {
         "langchain":  "langchain_google_genai",
-        "autogen":    "autogen_agentchat",
-        "crewai":     "crewai",
         "smolagents": "smolagents",
     }
     for lib in libs:

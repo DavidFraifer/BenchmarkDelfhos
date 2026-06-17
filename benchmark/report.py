@@ -15,7 +15,7 @@ from rich import box
 from .results import RunResult, TaskSummary
 from .config import MODEL, NUM_RUNS
 
-LIBRARIES = ["Delfhos", "LangChain", "AutoGen", "CrewAI", "SmolAgents"]
+LIBRARIES = ["Delfhos", "LangChain", "SmolAgents"]
 TASK_NAMES = {
     1: "Expense Categorisation",
     2: "Quarterly ROI Analysis",
@@ -28,8 +28,6 @@ TASK_NAMES = {
 SETUP_LOC = {
     "Delfhos":    {"1": 8,  "2": 9,  "3": 9,  "4": 9},
     "LangChain":  {"1": 15, "2": 16, "3": 16, "4": 16},
-    "AutoGen":    {"1": 12, "2": 13, "3": 13, "4": 13},
-    "CrewAI":     {"1": 14, "2": 15, "3": 15, "4": 15},
     "SmolAgents": {"1": 10, "2": 11, "3": 11, "4": 11},
 }
 
@@ -254,7 +252,6 @@ def save_markdown(results: list[RunResult], path: str = "BENCHMARK_REPORT.md") -
         "and define tools for a single task (imports excluded).",
         "- **Token counts** are extracted from each framework's native usage tracking: "
         "Delfhos (built-in), LangChain (`usage_metadata` per `AIMessage`), "
-        "AutoGen (`agent.actual_usage_summary`), CrewAI (`crew_output.token_usage`), "
         "SmolAgents (`agent.monitor.get_total_token_counts()`).",
         f"- Each task was run {NUM_RUNS} times; averages are taken over successful runs only.",
     ]

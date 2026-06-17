@@ -6,13 +6,11 @@ A comprehensive, professional benchmarking suite designed to compare modern LLM 
 
 ## 🚀 Overview
 
-This repository benchmarks 5 prominent agent frameworks using Google Gemini (`gemini-3.1-flash-lite-preview` by default):
+This repository benchmarks 3 prominent agent frameworks using Google Gemini (`gemini-3.1-flash-lite-preview` by default):
 
 1. **Delfhos**: A lightweight, high-performance agent framework focused on simplicity and minimal developer overhead.
 2. **LangChain** (with LangGraph): The industry-standard framework for building complex, graph-based agent topologies.
-3. **AutoGen** (v0.4+): Microsoft's event-driven agent orchestration framework.
-4. **CrewAI**: An agent framework specializing in role-playing, collaborative multi-agent teams.
-5. **SmolAgents**: Hugging Face's minimalist library for code-agent and tool-calling flows.
+3. **SmolAgents**: Hugging Face's minimalist library for code-agent and tool-calling flows.
 
 ---
 
@@ -94,7 +92,7 @@ python run_benchmark.py --tasks 1 3
 options:
   -h, --help           show this help message and exit
   --libs LIBS [LIBS ...]
-                       Libraries to benchmark (choices: delfhos, langchain, autogen, crewai, smolagents)
+                       Libraries to benchmark (choices: delfhos, langchain, smolagents)
                        Default: runs all libraries
   --tasks TASKS [TASKS ...]
                        Task IDs to run (choices: 1, 2, 3, 4)
