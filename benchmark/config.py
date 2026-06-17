@@ -15,13 +15,6 @@ os.environ["GEMINI_API_KEY"] = _key
 GOOGLE_API_KEY = _key
 
 PROJECT_ROOT = Path(__file__).parent.parent
-OAUTH_CREDS_PATH = str(PROJECT_ROOT / "oauth_gmail.json")
-
-# Shared token: first we try delfhos cache, then write here on first OAuth run
-BENCHMARK_TOKEN_PATH = str(PROJECT_ROOT / "benchmark" / "gmail_token.json")
-DELFHOS_TOKEN_PATH = str(Path.home() / ".config" / "oauth_gmail.json")
-
-GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 NUM_RUNS = 3  # Runs per task per library
 
